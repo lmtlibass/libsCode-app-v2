@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { Header2Component } from './components/header2/header2.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RecentEventsComponent } from './components/recent-events/recent-events.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     CardsComponent,
     Header2Component,
+    RecentEventsComponent,
     
   ],
   imports: [
