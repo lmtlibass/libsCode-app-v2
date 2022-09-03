@@ -14,6 +14,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { Header2Component } from './components/header2/header2.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RecentEventsComponent } from './components/recent-events/recent-events.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { RecentEventsComponent } from './components/recent-events/recent-events.
     AppRoutingModule,
     CoursModule,
     EvenementModule,
-    NgbModule
+    NgbModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
