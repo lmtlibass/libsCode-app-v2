@@ -31,10 +31,109 @@
     font-weight: bolder;
     padding: 4%;
 }
+.titre-section
+{
+    font-family: 'sen' sans-serif;
+    font-size: 34px;
+    font-weight: bolder;
+    line-height: 60px;
+    margin-left: 5%;
+}
+.cgu{
+    text-decoration: none;
+    color: #AAEBFF;
+    font-family: 'sen' sans-serif;
+    margin-left: 5%;
+}
+.panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+.panelvisible{
+    display: block;
+    padding: 3%;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: auto;
+    margin-top: 2%;
+}
+.section-acordeon{
+    display: flex ;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+}
+.titre-acordeo-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    padding-right: 3%;
+    padding-left: 3%;
+    cursor: pointer;
+}
+.one{
+    padding: 2%;
+    border: 1px #A9A9A9 solid;
+    background-color: #AAEBFF;
+    height: auto;
+    border-radius: 20px;
+}
+.two{
+    padding: 2%;
+    border: 1px #A9A9A9 solid;
+    background-color: #AAEBFF;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 5%;
+}
+.three{
+    padding: 2%;
+    border: 1px #A9A9A9 solid;
+    background-color: #AAEBFF;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 5%;
+}
+.accordion-titre{
+    font-family: 'sen' sans-serif;
+    font-size: 20px;
+}
+.acordeon-img{
+    width: 60px;
+    height: 60px;
+}
+.rotateimage{
+    transform:rotate(180deg);
+    transition: 1s;
+}
+.panel-p{
+    width: 60%;
+    float: left;
+    
+}
+.image-panel{
+    width: 60px;
+    height: 60px;
+    float: right;
+    margin-top: 17% !important;
+}
 
 
 
-@media screen and (max-width: 600px) {
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
     .section-1{
         background-color: #d9d9d93b;
         height: auto !important;
@@ -76,4 +175,16 @@
         font-size: 8px;
         padding: 3%;
     }
+    .titre-section
+    {
+    font-family: 'sen' sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    line-height: 60px;
+    }
+.section-acordeon{
+    width: 80%;
+    margin: 0 auto;
+    }
+
   }

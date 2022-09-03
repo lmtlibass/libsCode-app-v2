@@ -12,6 +12,7 @@ import { CguComponent } from './pages/cgu/cgu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { Header2Component } from './components/header2/header2.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { Header2Component } from './components/header2/header2.component';
     BrowserModule,
     AppRoutingModule,
     CoursModule,
-    EvenementModule
+    EvenementModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

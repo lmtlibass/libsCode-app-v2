@@ -21,3 +21,51 @@
      <app-cards></app-cards>
    </div>
    
+   <div class="section">
+        <p class="h2 titre-section  ml-5">
+            Pour plus de détails, visitez nos  Conditions <br> Générales d’utilisation.
+        </p>
+        <a href="" class="h4 cgu">
+            CGU
+        </a>
+   </div>
+   <div class="section section-acordeon mt-5">
+        <div class="one">
+            <div class="titre-acordeo-section" (click)="_acordeon()">
+                <h3 class="accordion-titre h3" >Comment devenire formateur ?</h3>
+                <img src="../../../assets/img/flecheacordeon.png" alt="" class="acordeon-img" [ngClass]="acordeonImage"/>
+            </div>
+            <div class="panel p-4" [ngClass]="acordeon1">
+                <p class="panel-p">
+                    Avant de pouvoir  partager un cours, il va falloir faire une demande à l’admin, qui va a son tours étudier et valider ou non la demande. Une fois validé vous aurez le rôle créateurs et un espace pour rédiger, partager, évaluer et faire le suivi de votre cours
+                </p>
+                <img src="../../../assets/img/plus.png" alt="" class="image-panel mt-5">
+            </div>
+        </div>
+        <div class="two">
+            <div class="titre-acordeo-section" (click)="__acordeon()">
+                <h3 class="accordion-titre h3" >Comment devenire formateur ?</h3>
+                <img src="../../../assets/img/flecheacordeon.png" alt="" class="acordeon-img" [ngClass]="acordeonImageTwo"/>
+            </div>
+            <div class="panel p-4" [ngClass]="acordeon2">
+                <p class="panel-p">
+                    Avant de pouvoir  partager un cours, il va falloir faire une demande à l’admin, qui va a son tours étudier et valider ou non la demande. Une fois validé vous aurez le rôle créateurs et un espace pour rédiger, partager, évaluer et faire le suivi de votre cours
+                </p>
+                <img src="../../../assets/img/plus.png" alt="" class="image-panel mt-5">
+            </div>
+        </div>
+        <div class="three">
+            <div class="titre-acordeo-section" (click)="___acordeon()">
+                <h3 class="accordion-titre h3" >Comment devenire formateur ?</h3>
+                <img src="../../../assets/img/flecheacordeon.png" alt="" class="acordeon-img" [ngClass]="acordeonImageThree"/>
+            </div>
+            <div class="panel p-4" [ngClass]="acordeon3">
+                <p class="panel-p">
+                    Avant de pouvoir  partager un cours, il va falloir faire une demande à l’admin, qui va a son tours étudier et valider ou non la demande. Une fois validé vous aurez le rôle créateurs et un espace pour rédiger, partager, évaluer et faire le suivi de votre cours
+                </p>
+                <img src="../../../assets/img/plus.png" alt="" class="image-panel mt-5">
+            </div>
+        </div>
+   </div>
+
+
