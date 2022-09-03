@@ -15,6 +15,7 @@ import { Header2Component } from './components/header2/header2.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RecentEventsComponent } from './components/recent-events/recent-events.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     CoursModule,
     EvenementModule,
     NgbModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
