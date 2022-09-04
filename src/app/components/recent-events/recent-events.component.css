@@ -1,9 +1,31 @@
-.cards{
-    overflow: hidden;
-    
-    
+.carousels{
+    width: 90%; 
+    margin: 0 auto;
+    height: 450px !important;
 }
-.card{
-    margin: 2% !important;
+.contain-card{
     width: 300px !important;
+    margin: 0 auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8%;
+}
+
+.card-head{
+    border-radius: 30px;
+    padding: 7%;
+    border: 1px #A7BEC6 solid;
+    width: 250px;
+    height: 190px;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-btn{
+    width: 90px;
+    background-color: #AAEBFF;
+    border-radius: 30px;
 }
