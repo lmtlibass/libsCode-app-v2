@@ -127,6 +127,12 @@
     margin-top: 5%;
     height: auto;
 }
+.all-cours{
+    float: right;
+    margin-right: 10%;
+    margin-top: 5%;
+    height: auto; 
+}
 .img-plus{
     width: 50px !important;
     height: 50px !important;

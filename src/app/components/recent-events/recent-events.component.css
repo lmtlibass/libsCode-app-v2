@@ -12,6 +12,10 @@
     justify-content: space-between;
     padding: 8%;
 }
+.dec-events{
+    text-align: justify;
+    text-justify: auto;
+}
 
 .card-head{
     border-radius: 30px;

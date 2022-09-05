@@ -1,0 +1,17 @@
+.card-cours-recents{
+
+    display:inline-flex;
+}
+
+.carde-cours-re{
+    width: 200px;
+    background-color: #F3FCFF;
+    border-radius: 12px;
+}
+.carde-cours-re .image img{
+    width: 70px;
+    height: 70px;
+}
+.card-titre{
+    height: 20px;
+}
