@@ -3,6 +3,8 @@
     padding: 4%;
     margin-top: 12%;
     width:  100%;
+    height: 400px;
+    
 }
 
 .image img{
@@ -12,14 +14,87 @@
 .contact{
     background-color: #ffff;
     border: 1px #000 solid;
-    width: 40%;
+    font-family: 'sen' sans-serif;
+    font-weight: bolder;
+    width: 50%;
+    height: 250px;
     margin: 0 auto;
     border-radius: 12px;
+    margin-top: 5%;
     padding: 2%;
     -webkit-box-shadow: 2px 23px 35px 3px rgba(0,0,0,0.1); 
     box-shadow: 2px 23px 35px 3px rgba(248, 248, 248, 0.1);
 }
+.image img{
+    margin-top: 8%;
+    width: 180px;
+    height: 170px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.form input{
+    border: 1px #000 solid;
+    padding: 2%;
+    z-index: 1;
+    border-radius: 12px;
+}
+
 .footer{
-    height: 20px;
+    padding: 2%;
     background-color: #000;
 }
+.img-rs{
+    width: 30%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.img-rs img{
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+}
+
+.p p{
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 700px) {
+    .sub-footre{
+        display: grid;
+    }
+    .contact{
+        font-family: 'sen' sans-serif !important;
+        background-color: none;
+        border: none;
+        font-weight: bolder;
+        width: 50%;
+        height: 250px;
+        margin: 0 auto;
+        border-radius: 12px;
+        margin-top: 5%;
+        padding: 2%;
+        
+    }
+    .image img{
+        margin-top: -19%;
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+    }
+    .form input{
+        border: 1px #000 solid;
+        padding: 3%;
+        width: 60%;
+        position: absolute;
+        z-index: 1;
+        border-radius: 12px;
+    }
+   
+  }
