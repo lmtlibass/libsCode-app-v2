@@ -1,1 +1,23 @@
-<p>all-cours works!</p>
+<body>
+    <div class="sidebar">
+        <img src="../../../assets/img/logo.png" alt="" style="width: 80px; height: 80px">
+        <a *ngFor="let m of modules" href="#home">{{m.name}}</a>
+    </div>
+    <div class="content">
+        <div class="card-content " >
+            <div class="row card-cours-recents" *ngFor="let c of cours" >
+                <div class="card carde-cours-re m-5 p-3">  
+                    <div class="image" *ngFor="let m of modules" >
+                        <img  *ngIf="c.module_id == m.id"  src="./../../assets/img/{{m.name}}.png" alt="image Not found">
+                    </div>
+                    <div class="h6 mt-3 card-titre">
+                        {{ c.titre}}
+                    </div>
+                    <div class="desc mt-3">
+                        {{ c.description | slice:0:70}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

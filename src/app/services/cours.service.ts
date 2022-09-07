@@ -19,5 +19,9 @@ export class CoursService {
       return this.http.get(environment.api_url + 'coursRe');
     }
 
+    getCours(){
+      return this.http.get(environment.api_url + 'cours');
+    }
+
 
 }

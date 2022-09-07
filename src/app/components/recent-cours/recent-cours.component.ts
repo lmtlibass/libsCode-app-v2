@@ -20,7 +20,6 @@ export class RecentCoursComponent implements OnInit {
     this.getModules();
     
   }
-  
 
   getModules(){
     return this.coursService.getModules().subscribe(
