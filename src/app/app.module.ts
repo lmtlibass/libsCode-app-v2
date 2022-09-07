@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RecentCoursComponent } from './components/recent-cours/recent-cours.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AuthModuleModule } from './modules/auth-module/auth-module.module';
+import { DemandeFComponent } from './pages/demande-f/demande-f.component';
+
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { AuthModuleModule } from './modules/auth-module/auth-module.module';
     RecentEventsComponent,
     RecentCoursComponent,
     FooterComponent,
+    DemandeFComponent,
+   
     
   ],
   imports: [

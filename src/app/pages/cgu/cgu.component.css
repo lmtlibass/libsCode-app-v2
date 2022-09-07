@@ -1,0 +1,13 @@
+.sub-header{
+    background-color: #FFD550;
+    padding: 4%;
+    border-radius: 20px;
+    height: 385px;
+    display: flex;
+    align-items: center;
+}
+.image img{
+    width: 250px;
+    height: 250px;
+    margin-left: 10%;
+}

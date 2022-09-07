@@ -7,7 +7,6 @@ import { RegisterComponent } from 'src/app/pages/register/register.component';
 import { Header2Component } from 'src/app/components/header2/header2.component';
 
 
-
 @NgModule({
   declarations: [
     LoginComponent,

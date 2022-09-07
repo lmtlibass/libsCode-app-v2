@@ -33,7 +33,7 @@
     border-radius: 15px;
     font-family: 'sen' sans-serif;
     font-weight: bolder;
-    padding: 4%;
+    padding: 2%;
 }
 .titre-section
 {
@@ -151,6 +151,13 @@
 .img-plus{
     width: 50px !important;
     height: 50px !important;
+    cursor: pointer;
+}
+.img-plus:hover{
+    width: 54px !important;
+    height: 54px !important;
+    cursor: pointer;
+    transition: 1s;
 }
 span{
     color: aqua;
