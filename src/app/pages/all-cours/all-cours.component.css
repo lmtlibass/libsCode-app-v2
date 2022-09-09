@@ -10,8 +10,23 @@ body {
   background-color: #AAEBFF;
   position: fixed;
   height: 100%;
-  overflow: auto;
+  overflow: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
 }
+.sidebar img{
+  cursor: pointer;
+  width: 100px; 
+  height: 80px
+  
+}
+.sidebar img:hover{
+  width: 110px !important;
+  transition: 1s;
+}
+::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
 
 .sidebar a {
   display: block;
@@ -34,10 +49,14 @@ div.content {
   margin-left: 200px;
   padding: 1px 16px;
   height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-cours-recents{
     display:inline-flex;
+    margin-left: 3% ;
 }
 
 .carde-cours-re{
@@ -49,11 +68,11 @@ div.content {
     align-items: center;
     text-align: auto;
     cursor: pointer;
+    
 }
 .carde-cours-re:hover{
     -webkit-box-shadow: 4px 33px 17px 13px rgba(193,193,193,0.52); 
     box-shadow: 4px 33px 17px 13px rgba(193,193,193,0.52);
-    /* transform: rotate(1deg); */
     transition: 1s;
 }
 .carde-cours-re .image img{
@@ -63,6 +82,31 @@ div.content {
 }
 .card-titre{
     height: 20px;
+}
+
+.show-card{
+  display: inline-flex;
+}
+.hide-card{
+  visibility: hidden;
+  display: none;
+}
+.search-bar form input{
+  border: 3px #AAEBFF solid;
+  border-radius: 12px;
+  padding: 2%;
+  background-color: #F3FCFF;
+}
+.search-bar form .btn-search{
+  background-color: #AAEBFF;
+  border-radius: 12px;
+  margin-left: 3% !important;
+}
+
+.titre h1{
+  color: #FFD550;
+  font-family: 'sen';
+  font-size: 34px;
 }
 
 @media screen and (max-width: 700px) {

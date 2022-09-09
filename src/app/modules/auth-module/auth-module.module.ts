@@ -17,6 +17,10 @@ import { Header2Component } from 'src/app/components/header2/header2.component';
     CommonModule,
     AuthModuleRoutingModule,
     
-  ]
+  ],
+  //ces composants de ce modules sont exporté afin d'être réutilisable dans d'autres components
+  exports: [
+    Header2Component,
+  ],
 })
 export class AuthModuleModule { }

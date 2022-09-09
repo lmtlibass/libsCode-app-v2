@@ -1,12 +1,38 @@
 <body>
     <div class="sidebar">
-        <img src="../../../assets/img/logo.png" alt="" style="width: 80px; height: 80px">
-        <a *ngFor="let m of modules" href="#home">{{m.name}}</a>
+        <img src="../../../assets/img/logo.png" alt=""  routerLink="/">
+        <a (click)="showAll()">Tous</a>
+        <div class="div" *ngFor="let m of modules">
+            <a (click)="filterCoursByModule(this.m.id)">{{m.name}}</a>
+        </div>
     </div>
     <div class="content">
-        <div class="card-content " >
-            <div class="row card-cours-recents" *ngFor="let c of cours" >
-                <div class="card carde-cours-re m-5 p-3">  
+        <div class="titre h1 mt-3">
+            <h1>Liste des cours</h1>
+        </div>
+        <div class="search-bar mt-3">
+            <form action="" class="d-flex flex-row justify-content-between">
+                <input type="text" placeholder="rechercher un cour">
+                <button class="btn ml-3 btn-search">chercher</button>
+            </form>
+        </div>
+        <div class="card-content" >
+            <div class="row card-cours-recents" [ngClass]="all">
+                <div class="card carde-cours-re m-5 p-3" *ngFor="let c of cours" (click)="showCours(this.c.id)" routerLink="/cour">  
+                    <div class="image" *ngFor="let m of modules" >
+                        <img  *ngIf="c.module_id == m.id"  src="./../../assets/img/{{m.name}}.png" alt="image Not found">
+                    </div>
+                    <div class="h6 mt-3 card-titre">
+                        {{ c.titre}}
+                    </div>
+                    <div class="desc mt-3">
+                        {{ c.description | slice:0:70}}
+                    </div>
+                </div>
+            </div>
+            <!-- Get cours By module -->
+            <div class="row card-cours-recents" [ngClass]="filter">
+                <div class="card carde-cours-re m-5 p-3" *ngFor="let c of coursByModule" (click)="showCours(this.c.id)" routerLink="/cour">  
                     <div class="image" *ngFor="let m of modules" >
                         <img  *ngIf="c.module_id == m.id"  src="./../../assets/img/{{m.name}}.png" alt="image Not found">
                     </div>
