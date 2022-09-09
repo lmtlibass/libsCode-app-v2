@@ -2,23 +2,63 @@
 <div class="container-fluid">
     <div class=" row sub-header ">
         <div class="text-section col-12 col-sm-12 col-lg-6">
-            <h1>{{ cour.titre }}</h1>
+            <h1 class="mb-2 h1"><strong>{{ cour.titre }}</strong></h1>
             <p>{{ cour.description }}</p>
         </div>
         <div class="img-section col-12 col-sm-12 col-lg-6">
-            <img src="../../../assets/img/React.png" alt="">
+            <img src="../../../assets/img/React.png" alt="" class="image-titre">
         </div>
     </div>
 </div>
 <div class="container-fluid">
-    <div class="row h2 titre-cour">
-        {{ cour.titre }}
+    <div class="row h2  titre-cour p-5">
+        <h1>{{ cour.titre }}</h1>
     </div>
-    <div class="row">
+    <div class="row p-5">
         <div class="col-sm12 col-md-4">
             <div href="#" class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Description
+                </h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">
+                    {{cour.description}}
+                </p>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Auteur
+                </h5>
+                <ul class="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400">
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span>Mamadou Lô</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span>momo@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-5 block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
+                <div class="flex">
+                    <div class="flex items-center ml-5 p-3">
+                        <img src="../../../assets/img/bien.png" alt="" class="img-note-1">
+                    </div>
+                    <div class="flex items-center ml-5 p-3">
+                        <img src="../../../assets/img/moin.png" alt="" class="img-note">
+                    </div>
+                    <div class="flex items-center ml-5 p-3">
+                        <img src="../../../assets/img/mal.png" alt="" class="img-note">
+                    </div>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <textarea name="" id="" cols="40" rows="2">Commentaire</textarea>
+                        <button type="submit" class="text-white bg-gradient-to-r from-yellow-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                            envoyer
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-8" [innerHTML] = cour.contenu>

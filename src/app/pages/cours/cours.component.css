@@ -1,5 +1,47 @@
 .sub-header{
-    background-color: #FFD550;
+    background-image: url('../../../assets/img/subHeader.png');
     margin-top: -2%;
+    height: 400px;
     padding: 7%;
 }
+.image-titre{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    
+}
+.text-section h1{
+    font-weight: bold;
+    color: #FFD550;
+}
+.text-section p{
+    font-weight: bold;
+    color: #FFD550;
+}
+.titre-cour {
+    text-align: center !important;
+    margin: 0 auto !important;
+    color: #FFD550;
+}
+textarea{
+    border-bottom: 1px solid;
+}
+.img-note-1{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.img-note{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.img-note-1:hover{
+    width: 52px;
+    height: 52px;
+}
+.img-note:hover{
+    width: 42px;
+    height: 42px;
+}
+

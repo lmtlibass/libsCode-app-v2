@@ -27,6 +27,16 @@ const routes: Routes = [
     path: 'cour',
     component: CoursComponent
   },
+  {
+    path: 'events',
+    loadChildren: ()=>import('./modules/evenement/evenement.module')
+    .then(e => e.EvenementModule)
+  },
+  {
+    path: 'event',
+    loadChildren: ()=>import('./modules/evenement/evenement.module')
+    .then(e => e.EvenementModule)
+  }
 ];
 
 @NgModule({

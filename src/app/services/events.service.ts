@@ -11,8 +11,13 @@ export class EventsService {
     private http: HttpClient
   ) { }
 
-
+    //recuperer les évenements réscents
   eventsRecent(){
     return this.http.get(environment.api_url + 'evenementRe')
+  }
+
+  //recuperer tous les évènements
+  getEvents(){
+    return this.http.get(environment.api_url + 'evenements')
   }
 }

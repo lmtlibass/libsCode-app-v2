@@ -44,19 +44,19 @@
         </div>
         <div class="two">
             <div class="titre-acordeo-section" (click)="__acordeon()">
-                <h3 class="accordion-titre h3" >Comment devenire formateur ?</h3>
+                <h3 class="accordion-titre h3" >Partager un événement ?</h3>
                 <img src="../../../assets/img/flecheacordeon.png" alt="" class="acordeon-img" [ngClass]="acordeonImageTwo"/>
             </div>
             <div class="panel p-4" [ngClass]="acordeon2">
                 <p class="panel-p">
-                    Avant de pouvoir  partager un cours, il va falloir faire une demande à l’admin, qui va a son tours étudier et valider ou non la demande. Une fois validé vous aurez le rôle créateurs et un espace pour rédiger, partager, évaluer et faire le suivi de votre cours
+                    Chaque utilisateur peut partager des événements. Cependant les événements qui seront validé par l’administrateurs seront sans doute être prienté vers l’informatique et la technologie
                 </p>
                 <img src="../../../assets/img/plus.png" alt="" class="image-panel mt-5">
             </div>
         </div>
         <div class="three">
             <div class="titre-acordeo-section" (click)="___acordeon()">
-                <h3 class="accordion-titre h3" >Comment devenire formateur ?</h3>
+                <h3 class="accordion-titre h3" >Acceder à mon space  ?</h3>
                 <img src="../../../assets/img/flecheacordeon.png" alt="" class="acordeon-img" [ngClass]="acordeonImageThree"/>
             </div>
             <div class="panel p-4" [ngClass]="acordeon3">
@@ -75,8 +75,8 @@
    </div>
         <app-recent-events></app-recent-events>
    </div>
-   <div class="all-events mb-5">
-    <span>voirs plus</span><img class="img-plus" src="../../../assets/img/plus.png" alt="">
+   <div class="row all-events mb-5">
+        <span>voirs plus</span><img class="img-plus" src="../../../assets/img/plus.png" alt="">
    </div>
    <div class="section" style="margin-top: 15%;">
         <p class="h2 titre-section  ml-5">
@@ -86,7 +86,7 @@
     <div class="section section-events-recentn p-3">
         <app-recent-cours></app-recent-cours>
    </div>
-   <div class="all-cours mb-5">
+   <div class="row all-cours mb-5 ">
         <span>voirs plus</span><img class="img-plus" src="../../../assets/img/plus.png" alt="">
    </div>
    <footer class="mt-5">

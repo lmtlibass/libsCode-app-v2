@@ -27,6 +27,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
+}
+.card-head:hover{
+    background-color: #FFD550; 
 }
 .card-btn{
     width: 90px;

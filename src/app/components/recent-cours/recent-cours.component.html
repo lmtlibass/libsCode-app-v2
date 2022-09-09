@@ -1,6 +1,6 @@
-<div class="container">
-    <div class="row card-cours-recents" *ngFor="let c of coursRe" >
-        <div class="card carde-cours-re m-5 p-3">  
+<div class="container-fluid">
+    <div class="row  card-cours-recents" >
+        <div class="card carde-cours-re m-5 p-3" *ngFor="let c of coursRe" >  
             <div class="image" *ngFor="let m of module" >
                 <img  *ngIf="c.module_id == m.id"  src="./../../assets/img/{{m.name}}.png" alt="image Not found">
             </div>
