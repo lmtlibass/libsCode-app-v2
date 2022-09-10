@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { ListeInscritEvent } from '../models/listeInscritEvent';
 
 @Injectable({
   providedIn: 'root'
@@ -20,4 +21,16 @@ export class EventsService {
   getEvents(){
     return this.http.get(environment.api_url + 'evenements')
   }
+
+  //recuperer un evenement
+  show(id: number){
+    return this.http.get(environment.api_url + 'evenement/' + id)
+  }
+
+  //enregistrer liste inscrit Event
+  savelInscritEvent(listeInscritEvent: ListeInscritEvent){
+    return this.http.post(environment.api_url + 'listeinscrits', listeInscritEvent)
+  }
+
+
 }

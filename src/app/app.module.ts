@@ -32,9 +32,7 @@ import { DemandeFComponent } from './pages/demande-f/demande-f.component';
     RecentEventsComponent,
     RecentCoursComponent,
     FooterComponent,
-    DemandeFComponent,
-    
-    
+    DemandeFComponent,  
   ],
   imports: [
     BrowserModule,
