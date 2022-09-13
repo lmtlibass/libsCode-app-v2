@@ -3,6 +3,7 @@ import { ListeInscritEvent } from 'src/app/models/listeInscritEvent';
 import { EventsService } from 'src/app/services/events.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Toast } from 'ngx-toastr';
   
 @Component({
   selector: 'app-event',
@@ -12,6 +13,7 @@ import { Router } from '@angular/router';
 export class EventComponent implements OnInit {
   event: any;
   inscriptEventsForm: FormGroup;
+  id_e = Number(localStorage.getItem('id_events'));
   liste: ListeInscritEvent = {
     prenom: '',
     nom: '',
@@ -20,8 +22,6 @@ export class EventComponent implements OnInit {
     evenement_id: 0,
     telephone: ''
   }
-  
-
 
   constructor(
     private eventService: EventsService,
@@ -55,17 +55,17 @@ export class EventComponent implements OnInit {
 
 
   storeData(){
-    const id_e = localStorage.getItem('id_evenement');
      this.liste.prenom = this.inscriptEventsForm.value.prenom;
      this.liste.nom = this.inscriptEventsForm.value.nom;
      this.liste.email = this.inscriptEventsForm.value.email;
      this.liste.telephone = this.inscriptEventsForm.value.telephone;
      this.liste.attentes = this.inscriptEventsForm.value.attentes;
-     this.liste.evenement_id = Number(id_e);
+     this.liste.evenement_id = this.id_e;
      console.log(this.liste);
      this.inscrit();
      this.inscriptEventsForm.reset();
-     alert("enregistrer avec succés");
+     
+    
     //  this.toastr.success('Vous vous êtes inscrit à l\'évèneùent', 'Inscription réussi!')
     }
 
@@ -73,10 +73,12 @@ export class EventComponent implements OnInit {
   inscrit(){
     return this.eventService.savelInscritEvent(this.liste).subscribe(
       (data: any) => {
-        console.log(data);
+        console.log(data.id);
        
       });
   }
 
+  //message d'alerte
+ 
 
 }

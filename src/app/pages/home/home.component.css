@@ -90,6 +90,10 @@
     box-shadow: 0px 10px 13px -7px #ffd65030, 13px -10px 0px -30px rgba(15,15,15,0);
 
 }
+.one:hover{
+    margin-left: 3%;
+    transition: 1s;
+}
 .two{
     padding: 2%;
     border: 1px #A9A9A9 solid;
@@ -102,6 +106,10 @@
     box-shadow: 0px 10px 13px -7px #ffd65030, 13px -10px 0px -30px rgba(15,15,15,0);
 
 }
+.two:hover{
+    margin-left: 3%;
+    transition: 1s;
+}
 .three{
     padding: 2%;
     border: 1px #A9A9A9 solid;
@@ -112,6 +120,10 @@
     border: 1px #FFD550 solid;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 13px -10px 0px -30px rgba(15,15,15,0); 
     box-shadow: 0px 10px 13px -7px #ffd65030, 13px -10px 0px -30px rgba(15,15,15,0);
+}
+.three:hover{
+    margin-left: 3%;
+    transition: 1s;
 }
 .accordion-titre{
     font-family: 'sen' sans-serif;
@@ -142,13 +154,15 @@
     float: right;
     margin-right: 10%;
     margin-top: 5%;
-    height: auto;
+    color: #AAEBFF;
+    
 }
 .all-cours{
     float: right;
     margin-right: 10%;
     margin-top: 5%;
     height: auto; 
+    color: #AAEBFF;
 }
 .img-plus{
     width: 50px !important;

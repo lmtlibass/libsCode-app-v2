@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     EventsComponent,
     EventComponent,
+  
   ],
   imports: [
     CommonModule,
