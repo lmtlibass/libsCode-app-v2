@@ -19,7 +19,6 @@ import { AuthModuleModule } from './modules/auth-module/auth-module.module';
 import { DemandeFComponent } from './pages/demande-f/demande-f.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

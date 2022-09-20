@@ -4,7 +4,7 @@
         <button class="dropdown-btn" (click)="toggle()">
             Dropdown<img src="../../../assets/img/dropdwon.png" class="imgdd">
         </button>
-        <div class="mt-5 row" [ngClass]="dropdown">
+        <div class="mt-5 row" [ngClass]="dd">
             <ul style="margin-top: 27%;">
                 <li>
                     <img src="../../../assets/img/i-liste.png" alt="" >
@@ -32,8 +32,8 @@
         <button class="dropdown-btn mt-5"  (click)="_toggle()">
             Dropdown<img src="../../../assets/img/dropdwon.png" class="imgdd">
         </button>
-        <div class="row mt-5" [ngClass]="_dropdown" >
-            <ul style="margin-top: 50%;">
+        <div class="row mt-5" >
+            <ul style="margin-top: 50%;" [ngClass]="_dd">
                 <li class="mt-5">
                     <img src="../../../assets/img/i-liste.png" alt="" >
                     <a class="ml-2" href="">

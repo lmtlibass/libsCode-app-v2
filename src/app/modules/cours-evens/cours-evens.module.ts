@@ -26,6 +26,7 @@ import { Header2Component } from 'src/app/components/header2/header2.component';
     CoursComponent,
     AddCoursComponent, 
     Header2Component,
+
   ],
 })
 export class CoursEvensModule { }
