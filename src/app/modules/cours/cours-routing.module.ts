@@ -5,9 +5,10 @@ import { AllCoursComponent } from 'src/app/pages/all-cours/all-cours.component';
 import { CoursComponent } from 'src/app/pages/cours/cours.component';
 
 const routes: Routes = [
-  {path: '', component: AllCoursComponent},
-  {path: 'cours', component: CoursComponent},
-  {path: 'addcours', component: AddCoursComponent}
+  {path: 'cours', component: AllCoursComponent},
+  {path: 'cour', component: CoursComponent},
+  {path: 'add-cours', component: AddCoursComponent}
+
 ];
 
 @NgModule({

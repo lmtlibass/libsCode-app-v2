@@ -1,9 +1,8 @@
-<body>
-<app-header2></app-header2>
+
 <div class="container-fluid login-body">
     <div class="form">
         <h1>
-            Connexion
+            <strong> Connexion </strong>
         </h1>
         <form action="">
             <div class="form-group mt-3">
@@ -12,13 +11,26 @@
             <div class="form-group mt-3">
                 <input type="password" name="password" placeholder="Entrez votre mot de passe">
             </div>
-            <div class="form-group mt-3">
-                <a href="#" class="forget-password-link">Mot de passe oublié ?</a>
+            <div class="flex">
+                <div class="form-group mt-3 flex-1">
+                    <a href="#" class="forget-password-link">Mot de passe oublié ?</a>
+                </div>
+                <div class="form-group mt-3 flex-1">
+                    <a href="#" class="create-compte" style="color: #AAEBFF;">Créer un compte ?</a>
+                </div>
             </div>
-            <button class="btn btn-login mt-3">
-                Connexion
-            </button>
+            <div class="flex">
+               <div class="flex-1 w-20">
+                    <button class="btn mt-3 bg-yellow-400 rounded-xl text-white hover:bg-sky-700" type="submit">
+                        Connexion
+                    </button>
+               </div>
+               <div class="flex-1 ml-20 w-80">
+                    <button class="btn mt-3 bg-yellow-800 rounded-xl text-white hover:bg-red-700" routerLink="/">
+                        Annuler
+                    </button>
+                </div>
+            </div>
         </form>
     </div>
 </div>
-</body>

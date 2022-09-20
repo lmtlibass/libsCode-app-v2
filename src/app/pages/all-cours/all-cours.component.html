@@ -18,7 +18,7 @@
         </div>
         <div class="card-content" >
             <div class="row card-cours-recents" [ngClass]="all">
-                <div class="card carde-cours-re m-5 p-3" *ngFor="let c of cours" (click)="showCours(this.c.id)" routerLink="/cour">  
+                <div class="card carde-cours-re m-5 p-3" *ngFor="let c of cours"  (click)="showCours(this.c.id)" >  
                     <div class="image" *ngFor="let m of modules" >
                         <img  *ngIf="c.module_id == m.id"  src="./../../assets/img/{{m.name}}.png" alt="image Not found">
                     </div>

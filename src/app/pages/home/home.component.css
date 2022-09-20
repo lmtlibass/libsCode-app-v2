@@ -1,17 +1,25 @@
+textarea{
+    border: 1px #6b6b6b solid; 
+    border-radius: 12px;
+}
+.modale{
+    background-color: #A9A9A9 !important;
+}
 .section-1{
     background-color: #d9d9d93b;
     height: auto;
-    margin-top: -16px;
+   position: relative;
 }
+
 .section-1-titre{
     font-weight: bolder;
     color: #000000;
-    font-size: 50px !important;
+    font-size: 30px !important;
     margin-top: -10%;
 }
 .section-1-gif{
     width: 600px;
-    height: 450px;
+    height: 300px;
     border-radius: 20px;
 }
 .section-1-btn{
@@ -38,10 +46,11 @@
 .titre-section
 {
     font-family: 'sen' sans-serif;
-    font-size: 34px;
+    font-size: 24px;
     font-weight: bolder;
-    line-height: 60px;
+    line-height: 30px;
     margin-left: 5%;
+    margin-top: 10%;
     color: #FFD550;
 }
 .cgu{
@@ -135,9 +144,7 @@
 }
 .rotateimage{
     transform:rotate(180deg);
-    -webkit-box-shadow: 0px 10px 13px -7px #FFD550, 13px -10px 0px -30px rgba(15,15,15,0); 
-    box-shadow: 0px 10px 13px -7px #FFD550, 13px -10px 0px -30px rgba(15,15,15,0);
-    transition: 1s;
+    transform: 2s;
 }
 .panel-p{
     width: 60%;
@@ -149,6 +156,7 @@
     height: 60px;
     float: right;
     margin-top: 17% !important;
+    cursor: pointer;
 }
 .all-events{
     float: right;

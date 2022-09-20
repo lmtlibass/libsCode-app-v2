@@ -12,4 +12,6 @@ body{
     -ms-overflow-style: none;   /* for Internet Explorer, Edge */
     scrollbar-width: 2px; /* for Firefox */
     font-family: 'sen' sans-serif;
+    background-color: #FAFAFA;
+    background-repeat: inherit;
 }

@@ -1,9 +1,8 @@
-<body>
-    <app-header2></app-header2>
+
     <div class="container-fluid login-body">
         <div class="form">
             <h1>
-                Inscription
+                <strong>Inscription</strong>
             </h1>
             <form action="">
                 <div class="form-group mt-3">
@@ -18,10 +17,18 @@
                 <div class="form-group mt-3">
                     <input type="password" name="password" placeholder="Confirmez votre mot de pass">
                 </div>
-                <button class="btn btn-login mt-3">
-                    inscription
-                </button>
+                <div class="flex">
+                    <div class="flex-1 w-20">
+                         <button class="btn mt-3 bg-yellow-400 rounded-xl text-white hover:bg-sky-700" type="submit">
+                             Inscription
+                         </button>
+                    </div>
+                    <div class="flex-1 ml-20 w-80">
+                         <button class="btn mt-3 bg-yellow-800 rounded-xl text-white hover:bg-red-700" routerLink="/">
+                             Annuler
+                         </button>
+                     </div>
+                 </div>
             </form>
         </div>
     </div>
-    </body>

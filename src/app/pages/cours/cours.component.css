@@ -1,13 +1,14 @@
 .sub-header{
-    background-image: url('../../../assets/img/subHeader.png');
+    background-image: url('../../../assets/img/subheadcours.png');
     margin-top: -2%;
     height: 400px;
     padding: 7%;
 }
 .image-titre{
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
+    width: 450px;
+    height: 400px;
+    margin-left: 7%;
+    margin-top: -17%;
     
 }
 .text-section h1{

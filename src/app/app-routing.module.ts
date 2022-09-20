@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CoursModule } from './modules/cours/cours.module';
 import { AddCoursComponent } from './pages/add-cours/add-cours.component';
 import { AllCoursComponent } from './pages/all-cours/all-cours.component';
 import { CguComponent } from './pages/cgu/cgu.component';
@@ -21,18 +20,7 @@ const routes: Routes = [
     loadChildren: ()=>import('./modules/auth-module/auth-module.module')
     .then(m => m.AuthModuleModule)
   },
-  {
-    path: 'allcours',
-    component: AllCoursComponent
-  },
-  {
-    path: 'cour',
-    component: CoursComponent
-  },
-  {
-    path: 'addcours',
-    component: AddCoursComponent
-  },
+ 
   {
     path: 'events',
     loadChildren: ()=>import('./modules/evenement/evenement.module')
@@ -42,6 +30,14 @@ const routes: Routes = [
     path: 'event',
     loadChildren: ()=>import('./modules/evenement/evenement.module')
     .then(e => e.EvenementModule)
+  },
+
+  //espace utilisateur
+
+  {
+    path: 'space-home',
+    loadChildren: ()=>import('./modules/space-user/space-user.module')
+    .then(sp => sp.SpaceUserModule)
   }
 ];
 

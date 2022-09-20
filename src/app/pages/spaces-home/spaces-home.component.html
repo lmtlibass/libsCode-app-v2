@@ -1,0 +1,75 @@
+<body>
+    <div class="sidebar">
+        <img src="../../../assets/img/logo.png" alt="" class="logo" routerLink="/">
+        <button class="dropdown-btn" (click)="toggle()">
+            Dropdown<img src="../../../assets/img/dropdwon.png" class="imgdd">
+        </button>
+        <div class="mt-5 row" [ngClass]="dropdown">
+            <ul style="margin-top: 27%;">
+                <li>
+                    <img src="../../../assets/img/i-liste.png" alt="" >
+                    <a class="ml-2" href="">
+                        Cours
+                    </a>
+                </li>
+                <li>
+                    <img src="../../../assets/img/i-add.png" alt="">
+                    <a  class="ml-2" href="">
+                        Ajouter cour
+                    </a>
+                </li>
+                <li>
+                    <img src="../../../assets/img/i-stat.png" alt="">
+                    <a  class="ml-2" href="">
+                        Stats
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="row mt-3">
+
+        </div>
+        <button class="dropdown-btn mt-5"  (click)="_toggle()">
+            Dropdown<img src="../../../assets/img/dropdwon.png" class="imgdd">
+        </button>
+        <div class="row mt-5" [ngClass]="_dropdown" >
+            <ul style="margin-top: 50%;">
+                <li class="mt-5">
+                    <img src="../../../assets/img/i-liste.png" alt="" >
+                    <a class="ml-2" href="">
+                        Evenements
+                    </a>
+                </li>
+                <li>
+                    <img src="../../../assets/img/i-add.png" alt="">
+                    <a  class="ml-2" href="">
+                        Ajouter evnmnt
+                    </a>
+                </li>
+                <li>
+                    <img src="../../../assets/img/i-inscrit.png" alt="">
+                    <a  class="ml-2" href="">
+                        Inscrits
+                    </a>
+                </li>
+            </ul>
+        </div>      
+    </div>
+
+    <!-- content -->
+    <div class="content">
+        <nav class="bg-gray-800">
+            <div class="flex">
+                <div class="w-1/5 bg-yellow-500 h-12">
+                    
+                </div>
+                <div class="w-3/5 bg-red-400 h-12">
+
+                </div>
+                <div class="w-1/5 bg-gray-500 h-12">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>

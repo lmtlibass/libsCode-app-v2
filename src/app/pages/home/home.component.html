@@ -1,9 +1,9 @@
     <app-header></app-header>
    <div class="container-fluid">
-    <div class="row section-1  d-flex flex-column-reverse flex-md-row justify-content-between align-items-center p-3 px-md-4 mb-3">
+    <div class="row section-1 d-flex flex-column-reverse flex-md-row justify-content-between align-items-center p-3 px-md-4 mb-3" style="margin-top: 9%;">
         <div class="sectiont col-sm-12 col-md-6 col-lg-6">
             <p class="h1 section-1-titre p-3">
-                Plateforme <br> d’apprentissage et <br> de  partage
+                Plateforme  d’apprentissage  <br> et de  partage
             </p>
             <div class="section-1-btn d-flex flex-md-row justify-content-between align-items-center mt-5">
                 <p class="section-1-p">Comment s' y prendre</p>
@@ -17,7 +17,7 @@
         </div>
     </div>   
    </div>
-   <div class="section">
+   <div class="section bg-white p-5" style="margin-top: -14px;">
      <app-cards></app-cards>
    </div>
    
@@ -29,6 +29,56 @@
             CGU
         </a>
    </div>
+   <!-- Demande Formateur -->
+   <ng-template #demande let-modal class="modale bg-danger">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Devenir Formateur</h4>
+            <button type="button" class="btn-close bg-yellow" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                <label for="dateOfBirth">Votre motivation</label>
+                <div class="input-group">
+                    <textarea name="motivation" id="" cols="60" rows="5"></textarea>
+                </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        </div>
+    </ng-template>
+  
+  <!-- Partage Evenement -->
+  <ng-template #partage let-modal class="modale">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Partager un événement</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                    <input type="text" placeholder="titre de l'événement">
+                </div>
+                <div class="mb-3">
+                    <textarea name="" id="" cols="50" rows="3" placeholder="Donner une description à l'événement"> </textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="dateOfBirth">Date de l'événement</label>
+                    <div class="input-group">
+                        <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+                        <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        </div>
+    </ng-template>
+  
+
    <div class="section section-acordeon mt-5">
         <div class="one">
             <div class="titre-acordeo-section" (click)="_acordeon()">
@@ -39,7 +89,7 @@
                 <p class="panel-p">
                     Avant de pouvoir  partager un cours, il va falloir faire une demande à l’admin, qui va a son tours étudier et valider ou non la demande. Une fois validé vous aurez le rôle créateurs et un espace pour rédiger, partager, évaluer et faire le suivi de votre cours
                 </p>
-                <img src="../../../assets/img/plus.png" alt="" class="image-panel mt-5">
+                <img src="../../../assets/img/plus.png" alt="" class="image-panel mt-5" (click)="open(demande)">
             </div>
         </div>
         <div class="two">
@@ -49,9 +99,9 @@
             </div>
             <div class="panel p-4" [ngClass]="acordeon2">
                 <p class="panel-p">
-                    Chaque utilisateur peut partager des événements. Cependant les événements qui seront validé par l’administrateurs seront sans doute être prienté vers l’informatique et la technologie
+                    Chaque utilisateur peut partager des événements. Cependant les événeme nts qui seront validé par l’administrateurs seront sans doute être prienté vers l’informatique et la technologie
                 </p>
-                <img src="../../../assets/img/plus.png" alt="" class="image-panel mt-5">
+                <img src="../../../assets/img/plus.png" alt="" class="image-panel mt-5" (click)="open(partage)">
             </div>
         </div>
         <div class="three">

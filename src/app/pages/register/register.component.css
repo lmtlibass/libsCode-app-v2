@@ -1,18 +1,15 @@
-body{
-    height: 100vh;
-    background-color: #AAEBFF;
-}
+
 .form{
-    margin: 3% auto;
+    margin: 4% auto;
     background-color: #fff;
-    padding: 2%;
+    padding: 4%;
     width: 40%;
-    border-radius: 20px;
-    border: 1px #ffd550 solid;
+    border-radius: 13px;
+    border: 1px rgb(255, 215, 82) solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    box-shadow:  7px 10px 8px   rgba(9, 9, 9, 0.055)
 }
 
 .btn-login{
@@ -20,9 +17,10 @@ body{
     border-radius: 20px;
 }
 input{
-    border-radius: 20px;
+    border-radius: 13px;
     width: 80%;
     padding: 2%;
+    border: 1px #4e4e4e solid;
 }
 input::placeholder{
     font-family: 'sen', sans-serif;

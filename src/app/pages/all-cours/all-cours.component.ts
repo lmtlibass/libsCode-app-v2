@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursService } from 'src/app/services/cours.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-all-cours',
@@ -13,7 +15,8 @@ export class AllCoursComponent implements OnInit {
   filter  = "hide-card" 
   all     = "show-card"
   constructor(
-    private coursService: CoursService
+    private coursService: CoursService,
+    private route: Router
   ) { }
 
   ngOnInit(): void {
@@ -55,6 +58,7 @@ export class AllCoursComponent implements OnInit {
 
   //recuperer et enregoister dans le storage le cours choisi par l'utilisateur
   showCours(id : any){
+    this.route.navigateByUrl('/cour',  { skipLocationChange: true })
     return localStorage.setItem(('id_cours'), id);
   }
 }

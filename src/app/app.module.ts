@@ -11,14 +11,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RecentEventsComponent } from './components/recent-events/recent-events.component';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { IvyCarouselModule} from 'angular-responsive-carousel';
 import { HttpClientModule } from '@angular/common/http';
 import { RecentCoursComponent } from './components/recent-cours/recent-cours.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AuthModuleModule } from './modules/auth-module/auth-module.module';
 import { DemandeFComponent } from './pages/demande-f/demande-f.component';
-
-
 
 
 
