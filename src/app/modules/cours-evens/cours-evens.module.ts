@@ -10,7 +10,7 @@ import { Header2Component } from 'src/app/components/header2/header2.component';
 import { SidebarComponent } from 'src/app/sidebar/sidebar.component';
 import { SpaceAddCourComponent } from 'src/app/pages/space-add-cour/space-add-cour.component';
 import { SpaceNavComponent } from 'src/app/components/space-nav/space-nav.component';
-
+import { SpaceEvenementsComponent } from 'src/app/pages/space-evenements/space-evenements.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { SpaceNavComponent } from 'src/app/components/space-nav/space-nav.compon
     SidebarComponent,
     SpaceAddCourComponent,
     SpaceNavComponent,
+    SpaceEvenementsComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +34,8 @@ import { SpaceNavComponent } from 'src/app/components/space-nav/space-nav.compon
     AddCoursComponent, 
     Header2Component,
     SidebarComponent,
-    SpaceNavComponent
+    SpaceNavComponent,
+    SpaceEvenementsComponent,
 
   ],
 })

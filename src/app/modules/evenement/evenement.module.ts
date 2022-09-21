@@ -5,20 +5,22 @@ import { EvenementRoutingModule } from './evenement-routing.module';
 import { EventsComponent } from 'src/app/pages/events/events.component';
 import { EventComponent } from 'src/app//pages/event/event.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { CoursEvensModule } from '../cours-evens/cours-evens.module';
+import { SpaceAddEventComponent } from 'src/app/pages/space-add-event/space-add-event.component';
 
 
 @NgModule({
   declarations: [
     EventsComponent,
     EventComponent,
-  
+    SpaceAddEventComponent,
   ],
   imports: [
     CommonModule,
     EvenementRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CoursEvensModule
   ]
 })
 export class EvenementModule { }
