@@ -17,8 +17,9 @@ body {
 }
 .sidebar img{
   cursor: pointer;
-  width: 100px; 
-  height: 80px
+  width: 150px; 
+  height: 120px;
+  margin-top: -10%;
   
 }
 .sidebar img:hover{

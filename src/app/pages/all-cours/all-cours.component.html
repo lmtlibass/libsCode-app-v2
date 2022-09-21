@@ -1,6 +1,6 @@
 <body>
     <div class="sidebar">
-        <img src="../../../assets/img/logo.png" alt=""  routerLink="/">
+        <img src="../../../assets/img/logo1.png" alt=""  routerLink="/">
         <a (click)="showAll()">Tous</a>
         <div class="div" *ngFor="let m of modules">
             <a (click)="filterCoursByModule(this.m.id)">{{m.name}}</a>

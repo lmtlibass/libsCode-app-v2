@@ -5,13 +5,15 @@ import { AllCoursComponent } from 'src/app/pages/all-cours/all-cours.component';
 import { CoursComponent } from 'src/app/pages/cours/cours.component';
 import { SpaceAddCourComponent } from 'src/app/pages/space-add-cour/space-add-cour.component';
 import { SpaceCoursComponent } from 'src/app/pages/space-cours/space-cours.component';
+import { SpacesHomeComponent } from 'src/app/pages/spaces-home/spaces-home.component';
 
 const routes: Routes = [
   {path: 'cours', component: AllCoursComponent},
   {path: 'cour', component: CoursComponent},
-  {path: 'add-cours', component: AddCoursComponent},
+  // {path: 'add-cours', component: AddCoursComponent},
   {path: 'space-cours', component: SpaceCoursComponent},
-  {path: 'space-cours-add', component: SpaceAddCourComponent}
+  {path: 'space-cours-add', component: SpaceAddCourComponent},
+  {path: 'space-home', component: SpacesHomeComponent},
 
 ];
 

@@ -4,12 +4,12 @@
         <h1>
             <strong> Connexion </strong>
         </h1>
-        <form action="">
+        <form #loginForm="ngForm" (ngSubmit)="onLogin()">
             <div class="form-group mt-3">
-                <input type="mail" name="email" placeholder="Entrez votre email">
+                <input required type="mail" name="email" placeholder="Entrez votre email" [(ngModel)]="form.email">
             </div>
             <div class="form-group mt-3">
-                <input type="password" name="password" placeholder="Entrez votre mot de passe">
+                <input required type="password" name="password" placeholder="Entrez votre mot de passe" [(ngModel)]="form.password">
             </div>
             <div class="flex">
                 <div class="form-group mt-3 flex-1">
@@ -21,7 +21,7 @@
             </div>
             <div class="flex">
                <div class="flex-1 w-20">
-                    <button class="btn mt-3 bg-yellow-400 rounded-xl text-white hover:bg-sky-700" type="submit">
+                    <button class="btn mt-3 bg-yellow-400 rounded-xl text-black hover:bg-sky-700" type="submit" [disabled]="!loginForm.valid">
                         Connexion
                     </button>
                </div>

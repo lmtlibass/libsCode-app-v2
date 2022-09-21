@@ -6,14 +6,14 @@ textarea{
     background-color: #A9A9A9 !important;
 }
 .section-1{
-    background-color: #d9d9d93b;
     height: auto;
-   position: relative;
+    padding: 05% !important;
+    position: relative;
 }
 
 .section-1-titre{
-    font-weight: bolder;
     color: #000000;
+    font-family: 'sen';
     font-size: 30px !important;
     margin-top: -10%;
 }
@@ -23,7 +23,7 @@ textarea{
     border-radius: 20px;
 }
 .section-1-btn{
-    padding: 5%;
+    padding: 3%;
     width: 350px;
     border-radius: 19px;
     background-color: #AAEBFF;
@@ -42,6 +42,7 @@ textarea{
     font-family: 'sen' sans-serif;
     font-weight: bolder;
     padding: 2%;
+    background-color: #FFD550;
 }
 .titre-section
 {

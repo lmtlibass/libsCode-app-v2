@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,8 @@ export class HomeComponent implements OnInit {
   closeResult = '';
   
   constructor(
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -24,28 +26,31 @@ export class HomeComponent implements OnInit {
   }
 
   _acordeon(){
-    this.acordeon1 == 'panel'?
-    this.acordeon1 = 'panelvisible':this.acordeon1 = 'panel'
+    this.acordeon1 == 'panel'
+      ?this.acordeon1 = 'panelvisible'
+      :this.acordeon1 = 'panel'
 
-    this.acordeonImage == 'defaultimg'?
-    this.acordeonImage = 'rotateimage':
-    this.acordeonImage = 'defaultimg'
+    this.acordeonImage == 'defaultimg'
+      ?this.acordeonImage = 'rotateimage'
+      :this.acordeonImage = 'defaultimg'
   }
   __acordeon(){
-    this.acordeon2 == 'panel'?
-    this.acordeon2 = 'panelvisible':this.acordeon2 = 'panel'
+    this.acordeon2 == 'panel'
+      ?this.acordeon2 = 'panelvisible'
+      :this.acordeon2 = 'panel'
 
-    this.acordeonImageTwo == 'defaultimg'?
-    this.acordeonImageTwo = 'rotateimage':
-    this.acordeonImageTwo = 'defaultimg'
+    this.acordeonImageTwo == 'defaultimg'
+      ?this.acordeonImageTwo = 'rotateimage'
+      :this.acordeonImageTwo = 'defaultimg'
   }
   ___acordeon(){
-    this.acordeon3 == 'panel'?
-    this.acordeon3 = 'panelvisible':this.acordeon3 = 'panel'
+    this.acordeon3 == 'panel'
+      ?this.acordeon3 = 'panelvisible'
+      :this.acordeon3 = 'panel'
 
-    this.acordeonImageThree == 'defaultimg'?
-    this.acordeonImageThree = 'rotateimage':
-    this.acordeonImageThree = 'defaultimg'
+    this.acordeonImageThree == 'defaultimg'
+      ?this.acordeonImageThree = 'rotateimage'
+      :this.acordeonImageThree = 'defaultimg'
   }
 
   open(content: any) {

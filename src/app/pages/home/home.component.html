@@ -1,57 +1,55 @@
-    <app-header></app-header>
-   <div class="container-fluid">
-    <div class="row section-1 d-flex flex-column-reverse flex-md-row justify-content-between align-items-center p-3 px-md-4 mb-3" style="margin-top: 9%;">
-        <div class="sectiont col-sm-12 col-md-6 col-lg-6">
-            <p class="h1 section-1-titre p-3">
-                Plateforme  d’apprentissage  <br> et de  partage
-            </p>
-            <div class="section-1-btn d-flex flex-md-row justify-content-between align-items-center mt-5">
-                <p class="section-1-p">Comment s' y prendre</p>
-                <button class="btn btn-dark section-1-btn-plus" routerLink="/cgu">
-                    En savoir plus
-                </button>
+<app-header></app-header>
+    <div class="container-fluid">
+        <div class="row section-1 d-flex flex-column-reverse flex-md-row justify-content-between align-items-center p-3 px-md-4 mb-3" style="margin-top: 9%;">
+            <div class="section col-sm-12 col-md-6 col-lg-6">
+                <p class="h1 section-1-titre p-3">
+                    Plateforme  d’apprentissage  <br> et de  partage
+                </p>
+                <div class="section-1-btn d-flex flex-md-row justify-content-between align-items-center mt-5">
+                    <p class="section-1-p">Comment s' y prendre</p>
+                    <button class="btn  section-1-btn-plus" routerLink="/cgu">
+                        En savoir plus
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-6 img gif-img">
-            <img class="section-1-gif" src="../../../assets/img/section-1.gif" alt="" style="opacity: 40%;">
-        </div>
-    </div>   
-   </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 img gif-img">
+                <img class="section-1-gif" src="../../../assets/img/section-1.gif" alt="" style="opacity: 40%;">
+            </div>
+        </div>   
+    </div>
    <div class="section bg-white p-5" style="margin-top: -14px;">
      <app-cards></app-cards>
    </div>
    
-   <div class="section">
+    <div class="section">
         <p class="h2 titre-section  ml-5">
             Pour plus de détails, visitez nos  Conditions <br> Générales d’utilisation.
         </p>
-        <a href="" class="h4 cgu">
+        <a href="/cgu" class="h4 cgu">
             CGU
         </a>
-   </div>
+    </div>
    <!-- Demande Formateur -->
-   <ng-template #demande let-modal class="modale bg-danger">
+    <ng-template #demande let-modal class="p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
         <div class="modal-header">
             <h4 class="modal-title" id="modal-basic-title">Devenir Formateur</h4>
-            <button type="button" class="btn-close bg-yellow" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+            <button type="button" class="btn-close bg-danger" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
         </div>
-        <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                <label for="dateOfBirth">Votre motivation</label>
-                <div class="input-group">
-                    <textarea name="motivation" id="" cols="60" rows="5"></textarea>
-                </div>
+        <div class="modal-body ">
+            <form class="space-y-6">
+                <div class="mb-3">                   
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Votre motivation</label>
+                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
                 </div>
             </form>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+            <button type="button" class="btn btn-outline-success" (click)="modal.close('Save click')">Save</button>
         </div>
     </ng-template>
   
   <!-- Partage Evenement -->
-  <ng-template #partage let-modal class="modale">
+    <ng-template #partage let-modal class="p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
         <div class="modal-header">
             <h4 class="modal-title" id="modal-basic-title">Partager un événement</h4>
             <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
@@ -59,16 +57,20 @@
         <div class="modal-body">
             <form>
                 <div class="mb-3">
-                    <input type="text" placeholder="titre de l'événement">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Titre de l'événement</label>
+                    <input type="text" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="titre de l'événement" required>
                 </div>
-                <div class="mb-3">
-                    <textarea name="" id="" cols="50" rows="3" placeholder="Donner une description à l'événement"> </textarea>
+                <div class="mb-3">    
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="dateOfBirth">Date de l'événement</label>
                     <div class="input-group">
-                        <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
-                        <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <input datepicker datepicker-autohide type="date" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
                     </div>
                 </div>
             </form>
@@ -79,7 +81,7 @@
     </ng-template>
   
 
-   <div class="section section-acordeon mt-5">
+    <div class="section section-acordeon mt-5">
         <div class="one">
             <div class="titre-acordeo-section" (click)="_acordeon()">
                 <h3 class="accordion-titre h3" >Comment devenire formateur ?</h3>
@@ -113,34 +115,34 @@
                 <p class="panel-p">
                     Avant de pouvoir  partager un cours, il va falloir faire une demande à l’admin, qui va a son tours étudier et valider ou non la demande. Une fois validé vous aurez le rôle créateurs et un espace pour rédiger, partager, évaluer et faire le suivi de votre cours
                 </p>
-                <img src="../../../assets/img/plus.png" alt="" class="image-panel mt-5" routerLink="/space-home">
+                <a href="/space-home"><img src="../../../assets/img/plus.png" alt="" class="image-panel mt-5" ></a>
             </div>
         </div>
-   </div>
-   <div class="section section-events-recentn mt-3 p-5" style="background-color: #FCFCFC">
-    <div class="section mt-4">
-        <p class="h2 titre-section  ml-5">
-            Les événements récents
-        </p >
-   </div>
+    </div>
+    <div class="section section-events-recentn mt-3 p-5" style="background-color: #FCFCFC">
+        <div class="section mt-4">
+            <p class="h2 titre-section  ml-5">
+                Les événements récents
+            </p >
+        </div>
         <app-recent-events></app-recent-events>
-   </div>
-   <a routerLink="/events" class=" all-events mb-5 ">
-        <img class="img-plus" src="../../../assets/img/plus.png" alt="">voirs plus
-   </a>
-   <div class="section" style="margin-top: 15%;">
+    </div>
+    <a routerLink="/events" class=" all-events mb-5 ">
+            <img class="img-plus" src="../../../assets/img/plus.png" alt="">voirs plus
+    </a>
+    <div class="section" style="margin-top: 15%;">
         <p class="h2 titre-section  ml-5">
             Une aperçu de nos cours
         </p>
     </div>
     <div class="section section-events-recentn p-3">
         <app-recent-cours></app-recent-cours>
-   </div>
-   <a routerLink="/allcours" class=" all-cours mb-5 ">
+    </div>
+    <a routerLink="/allcours" class=" all-cours mb-5 ">
         <img class="img-plus" src="../../../assets/img/plus.png" alt="">voirs plus
     </a>
-   <footer class="mt-5">
-       <app-footer></app-footer>
-   </footer>
+    <footer class="mt-5">
+        <app-footer></app-footer>
+    </footer>
 
 

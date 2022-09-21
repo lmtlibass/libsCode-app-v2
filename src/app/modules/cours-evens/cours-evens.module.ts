@@ -11,6 +11,10 @@ import { SidebarComponent } from 'src/app/sidebar/sidebar.component';
 import { SpaceAddCourComponent } from 'src/app/pages/space-add-cour/space-add-cour.component';
 import { SpaceNavComponent } from 'src/app/components/space-nav/space-nav.component';
 import { SpaceEvenementsComponent } from 'src/app/pages/space-evenements/space-evenements.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SpacesHomeComponent } from 'src/app/pages/spaces-home/spaces-home.component';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,15 @@ import { SpaceEvenementsComponent } from 'src/app/pages/space-evenements/space-e
     SpaceAddCourComponent,
     SpaceNavComponent,
     SpaceEvenementsComponent,
+    SpacesHomeComponent,
   ],
   imports: [
     CommonModule,
     AngularEditorModule,
     FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule,
   ],
   exports: [
     AllCoursComponent,
@@ -36,7 +44,7 @@ import { SpaceEvenementsComponent } from 'src/app/pages/space-evenements/space-e
     SidebarComponent,
     SpaceNavComponent,
     SpaceEvenementsComponent,
-
+    HttpClientModule,
   ],
 })
 export class CoursEvensModule { }

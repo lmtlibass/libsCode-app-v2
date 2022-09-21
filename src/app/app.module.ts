@@ -17,8 +17,7 @@ import { RecentCoursComponent } from './components/recent-cours/recent-cours.com
 import { FooterComponent } from './components/footer/footer.component';
 import { AuthModuleModule } from './modules/auth-module/auth-module.module';
 import { DemandeFComponent } from './pages/demande-f/demande-f.component';
-
-
+import { CoursEvensModule } from './modules/cours-evens/cours-evens.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,8 +29,6 @@ import { DemandeFComponent } from './pages/demande-f/demande-f.component';
     RecentCoursComponent,
     FooterComponent,
     DemandeFComponent,
-    
-    
   ],
   imports: [
     BrowserModule,
@@ -42,6 +39,7 @@ import { DemandeFComponent } from './pages/demande-f/demande-f.component';
     IvyCarouselModule,
     HttpClientModule,
     AuthModuleModule,
+    CoursEvensModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

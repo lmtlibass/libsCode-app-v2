@@ -31,17 +31,11 @@ const routes: Routes = [
     loadChildren: ()=>import('./modules/evenement/evenement.module')
     .then(e => e.EvenementModule)
   },
-
-  //espace utilisateur
-
-  {
-    path: 'space-home',
-    loadChildren: ()=>import('./modules/space-user/space-user.module')
-    .then(sp => sp.SpaceUserModule)
-  }
+  
 ];
 
 @NgModule({
+
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
