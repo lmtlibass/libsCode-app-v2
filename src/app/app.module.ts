@@ -30,7 +30,6 @@ import { DemandeFComponent } from './pages/demande-f/demande-f.component';
     RecentCoursComponent,
     FooterComponent,
     DemandeFComponent,
-    
   ],
   imports: [
     BrowserModule,

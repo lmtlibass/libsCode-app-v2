@@ -7,6 +7,9 @@ import { AddCoursComponent } from 'src/app/pages/add-cours/add-cours.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { FormsModule } from '@angular/forms';
 import { Header2Component } from 'src/app/components/header2/header2.component';
+import { SidebarComponent } from 'src/app/sidebar/sidebar.component';
+import { SpaceAddCourComponent } from 'src/app/pages/space-add-cour/space-add-cour.component';
+import { SpaceNavComponent } from 'src/app/components/space-nav/space-nav.component';
 
 
 @NgModule({
@@ -15,6 +18,9 @@ import { Header2Component } from 'src/app/components/header2/header2.component';
     CoursComponent,
     AddCoursComponent, 
     Header2Component,
+    SidebarComponent,
+    SpaceAddCourComponent,
+    SpaceNavComponent,
   ],
   imports: [
     CommonModule,
@@ -26,6 +32,8 @@ import { Header2Component } from 'src/app/components/header2/header2.component';
     CoursComponent,
     AddCoursComponent, 
     Header2Component,
+    SidebarComponent,
+    SpaceNavComponent
 
   ],
 })

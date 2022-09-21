@@ -94,31 +94,8 @@ body {
     padding-left: 8px;
     transition: 2s !important;
 }
- 
-
-.carde-cours-re{
-  width: 200px;
-  background-color: #F3FCFF;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: auto;
-  cursor: pointer;
-}
-.carde-cours-re:hover{
-  -webkit-box-shadow: 4px 33px 17px 13px rgba(193,193,193,0.52); 
-  box-shadow: 4px 33px 17px 13px rgba(193,193,193,0.52);
-  /* transform: rotate(1deg); */
-  transition: 1s;
-}
-.carde-cours-re .image img{
-  width: 70px;
-  height: 70px;
-  
-}
-.card-titre{
-  height: 20px;
+li{
+    cursor: pointer;
 }
   
 
