@@ -18,4 +18,8 @@ export class AuthService {
     return this.http.post(environment.api_url + 'register', data);
   }
 
+  login(data: any){
+    return this.http.post(environment.api_url + 'login', data);
+  }
+
 }
