@@ -12,28 +12,37 @@ export class SpaceCoursComponent implements OnInit {
   coursRe: any;
   module: any;
 
+  id_user = localStorage.getItem('user_id');
   constructor(
     private coursService: CoursService
   ) { }
 
+  //information user
+  public cour: any
+  public info = ''
+
   ngOnInit(): void {
-    this.getCoursRecent();
+    this.getCours(Number(this.id_user));
     this.getModules();
-    
   }
 
   getModules(){
     return this.coursService.getModules().subscribe(
       (data)=>{
-       this.module = data;
-       console.log(this.module);
+          this.module = data;
+          console.log(this.module);
       }
     )
   }
 
-  getCoursRecent(){
-    return this.coursService.getRecentsCours().subscribe(
+  //récuperer les cours partager par un utilisateur
+  getCours(id: number){
+    return this.coursService.getCourqByUser(id).subscribe(
       (data)=>{
+        data = this.cour
+        this.cour = [] 
+          ?this.info = 'Vous n\'avez pas encour de cours partagés'
+          :this.info = '';
         this.coursRe = data;
         console.log(data);
         

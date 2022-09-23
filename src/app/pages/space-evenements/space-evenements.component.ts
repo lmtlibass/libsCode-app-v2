@@ -8,17 +8,26 @@ import { EventsService } from 'src/app/services/events.service';
 })
 export class SpaceEvenementsComponent implements OnInit {
   events:  any;
-  
+  user_id = localStorage.getItem('user_id');
+  public cour: any;
+  public info = '';
+
+
   constructor(
     private evenetService: EventsService
   ) { }
 
   ngOnInit(): void {
-    this.getEvents();
+    this.getEvents(Number(this.user_id));
   }
-  getEvents(){
-    return this.evenetService.getEvents().subscribe(
+  //récuperer les événements partagés par un utilisateur
+  getEvents(id: number){
+    return this.evenetService.getEventByUser(id).subscribe(
       (res)=>{
+        res = this.cour
+        this.cour = [] 
+          ?this.info = 'Vous n\'avez pas encour partagés d\'événement'
+          :this.info = '';
         this.events = res
       }
     )

@@ -27,6 +27,11 @@ export class EventsService {
     return this.http.get(environment.api_url + 'evenement/' + id)
   }
 
+  //recupérer les événements partagés par un utilisateur
+  getEventByUser(id: number){
+    return this.http.get(environment.api_url + 'evenementUser/' + id);
+  }
+
   //enregistrer liste inscrit Event
   savelInscritEvent(listeInscritEvent: ListeInscritEvent){
     return this.http.post(environment.api_url + 'listeinscrits', listeInscritEvent)
