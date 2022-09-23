@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UserGuard } from './guards/-user.guard';
 import { AddCoursComponent } from './pages/add-cours/add-cours.component';
 import { AllCoursComponent } from './pages/all-cours/all-cours.component';
 import { CguComponent } from './pages/cgu/cgu.component';
@@ -8,12 +9,18 @@ import { HomeComponent } from './pages/home/home.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
-  {path: 'cgu', component: CguComponent},
+  {path: '', 
+  component: HomeComponent,
+  },
+  {
+    path: 'cgu', 
+    component: CguComponent,
+  },
   { 
     path: 'login',
     loadChildren: ()=>import('./modules/auth-module/auth-module.module')
-    .then(m => m.AuthModuleModule)
+    .then(m => m.AuthModuleModule),
+   
   },
   {
     path: 'register',
@@ -21,16 +28,6 @@ const routes: Routes = [
     .then(m => m.AuthModuleModule)
   },
  
-  {
-    path: 'events',
-    loadChildren: ()=>import('./modules/evenement/evenement.module')
-    .then(e => e.EvenementModule)
-  },
-  {
-    path: 'event',
-    loadChildren: ()=>import('./modules/evenement/evenement.module')
-    .then(e => e.EvenementModule)
-  },
   
 ];
 

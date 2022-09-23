@@ -34,6 +34,10 @@ export class CoursService {
     showCours(id : number){
       return this.http.get(environment.api_url + 'cour/' + id)
     }
+    //Enregistrer un cours 
+    addCours(cours :any){
+      return this.http.post(environment.api_url + 'cours', cours);
+    }
 
 
 }

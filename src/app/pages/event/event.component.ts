@@ -3,7 +3,7 @@ import { ListeInscritEvent } from 'src/app/models/listeInscritEvent';
 import { EventsService } from 'src/app/services/events.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Toast } from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr';
   
 @Component({
   selector: 'app-event',
@@ -26,7 +26,8 @@ export class EventComponent implements OnInit {
   constructor(
     private eventService: EventsService,
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService,
   ) { 
     this.inscriptEventsForm = this.fb.group({
       prenom: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
@@ -74,7 +75,8 @@ export class EventComponent implements OnInit {
     return this.eventService.savelInscritEvent(this.liste).subscribe(
       (data: any) => {
         console.log(data.id);
-       
+        this.toastr.show('Un message vous sera envoyé par l\'organisateur', 'Inscription réussi 👌 ');
+        this.router.navigateByUrl('/events');
       });
   }
 

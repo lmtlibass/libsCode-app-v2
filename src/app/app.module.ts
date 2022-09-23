@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AuthModuleModule } from './modules/auth-module/auth-module.module';
 import { DemandeFComponent } from './pages/demande-f/demande-f.component';
 import { CoursEvensModule } from './modules/cours-evens/cours-evens.module';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { CoursEvensModule } from './modules/cours-evens/cours-evens.module';
     HttpClientModule,
     AuthModuleModule,
     CoursEvensModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

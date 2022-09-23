@@ -32,5 +32,11 @@ export class EventsService {
     return this.http.post(environment.api_url + 'listeinscrits', listeInscritEvent)
   }
 
+  //Ajouter un evenement
+  saveEvents(data: any){
+    return this.http.post(environment.api_url + 'evenements', data);
+  }
+  
+
 
 }

@@ -1,6 +1,6 @@
 <body>
     <div class="sidebar">
-        <img src="../../../assets/img/logo.png" alt=""  routerLink="/">
+        <img src="../../../assets/img/logo1.png" alt=""  routerLink="/">
     </div>
     <div class="content">
         <div class="titre h1 mt-3">
@@ -14,10 +14,7 @@
         </div>
         <div class="row card-events mt-9 w-75">
             <div class=" p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 mt-3"  
-                *ngFor="let e of events"
-                (click)="showEvent(this.e.id)"
-                routerLink="/event/event"
-            >
+                *ngFor="let e of events">
                 <img class="mb-2 w-10 h-10 text-gray-500 dark:text-gray-400" aria-hidden="true"  src="../../../assets/img/events.png" >
                     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-yellow-900 yellow:text-white" style="color: #AAEBFF !important;">
                        {{ e.titre_evenement }}
@@ -28,7 +25,7 @@
                 <p class="mb-3 font-semibold text-gray-900 dark:text-gray-900" style="color: #AAEBFF !important;">
                     {{ e.date_evenement }}
                 </p>
-                <button type="button" class="text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                <button type="button"  (click)="showEvent(this.e.id)" class="text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
                     S'inscrire 
                 </button>
             </div>

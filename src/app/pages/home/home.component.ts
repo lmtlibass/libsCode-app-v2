@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
+import { DemandeService } from 'src/app/services/demande.service';
+import { EventsService } from 'src/app/services/events.service';
 
 @Component({
   selector: 'app-home',
@@ -16,13 +18,61 @@ export class HomeComponent implements OnInit {
   acordeonImageThree = 'defaultimg'
   closeResult = '';
   
+  id = localStorage.getItem('user_id');
+  public formDemande = {
+    motivation	: '',
+    user_id: Number(this.id),
+  }
+  public formEvents = {
+    titre_evenement		: '',
+    description: '',
+    date_evenement: '',
+    etat: 0,
+    user_id: Number(this.id),
+  }
   constructor(
     private modalService: NgbModal,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private demandeService: DemandeService,
+    private eventService: EventsService
   ) { }
 
   ngOnInit(): void {
     
+  }
+
+
+
+  // envoyer une demande pour devenir formateur 
+  addDemande(): any{
+    console.log(this.formDemande);
+    
+    return this.demandeService.demande(this.formDemande).subscribe(
+      data=> {
+        console.log(data);
+        this.toastr.info('Demande envoyé avec succés', 'Réussi🤭 ')
+      },
+      error=>{
+        console.log(error);
+        this.toastr.error('Une erreur c\'est produit rééssayez plus tard','Oups!');
+      }
+    );
+  }
+
+  //Partager un événement
+  addEvent(){
+    console.log(this.formEvents);
+    
+    return this.eventService.saveEvents(this.formEvents).subscribe(
+      data=> {
+        console.log(data);
+        this.toastr.info('Votre Requête sera traité', 'Réussi🤭 ')
+      },
+      error=>{
+        console.log(error);
+        this.toastr.error('Une erreur c\'est produit rééssayez plus tard','Oups!');
+      }
+    )
   }
 
   _acordeon(){

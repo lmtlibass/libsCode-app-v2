@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -16,7 +18,9 @@ export class RegisterComponent implements OnInit {
 
   public error: any = [];
   constructor(
-    private auth: AuthService
+    private auth: AuthService,
+    private toastr: ToastrService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -25,8 +29,15 @@ export class RegisterComponent implements OnInit {
   onRegister(){
     console.log(this.form);
     return this.auth.signup(this.form).subscribe(
-      data=>console.log(data),
-      error=>this.handleError(error)
+      data=>{
+        console.log(data);
+        this.toastr.success('Vous vous êtes inscrit', 'Réussi🌤️');
+        this.router.navigateByUrl('/')
+      },
+      error=>{
+        this.handleError(error);
+        this.toastr.error('Une erreur c\'est produit, Oups!');
+      }
     );
     
   }
