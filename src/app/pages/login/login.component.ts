@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
   handleResponse(data: any){
     localStorage.setItem('role',data.user.roles[0].role);
     localStorage.setItem('user_id', data.user.id)
+    localStorage.setItem('name', data.user.name)
   }
   
     handleError(error: any){

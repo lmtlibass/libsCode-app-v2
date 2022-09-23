@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./space-nav.component.css']
 })
 export class SpaceNavComponent implements OnInit {
-
+  user = {
+    name: localStorage.getItem('name'),
+  }
   constructor() { }
 
   ngOnInit(): void {

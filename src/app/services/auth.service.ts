@@ -21,4 +21,6 @@ export class AuthService {
     return this.http.post(environment.api_url + 'login', data);
   }
 
+  
+
 }

@@ -6,6 +6,7 @@ import { EventComponent } from 'src/app/pages/event/event.component';
 import { EventsComponent } from 'src/app/pages/events/events.component';
 import { SpaceAddEventComponent } from 'src/app/pages/space-add-event/space-add-event.component';
 import { SpaceEvenementsComponent } from 'src/app/pages/space-evenements/space-evenements.component';
+import { SpaceInscritEventComponent } from 'src/app/space-inscrit-event/space-inscrit-event.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,11 @@ const routes: Routes = [
     component: SpaceAddEventComponent,
     canActivate: [CreatorGuard],
   },
+  {
+    path: 'space-liste-inscrit',
+    component: SpaceInscritEventComponent,
+    canActivate: [CreatorGuard],
+  }
  
 ];
 

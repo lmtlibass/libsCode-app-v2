@@ -31,16 +31,22 @@ export class EventsService {
   getEventByUser(id: number){
     return this.http.get(environment.api_url + 'evenementUser/' + id);
   }
-
-  //enregistrer liste inscrit Event
-  savelInscritEvent(listeInscritEvent: ListeInscritEvent){
-    return this.http.post(environment.api_url + 'listeinscrits', listeInscritEvent)
-  }
-
   //Ajouter un evenement
   saveEvents(data: any){
     return this.http.post(environment.api_url + 'evenements', data);
   }
+
+  //enregistrer liste inscrit Event
+  savelInscritEvent(listeInscritEvent: ListeInscritEvent){
+    return this.http.post(environment.api_url + 'listeinscrits', listeInscritEvent);
+  }
+
+  //recuperer liste des inscrit
+  getInscrits(event_id: number){
+    return this.http.get(environment.api_url + 'liste/' + event_id);
+  }
+
+  
   
 
 

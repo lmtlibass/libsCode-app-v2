@@ -19,6 +19,8 @@ import { AuthModuleModule } from './modules/auth-module/auth-module.module';
 import { DemandeFComponent } from './pages/demande-f/demande-f.component';
 import { CoursEvensModule } from './modules/cours-evens/cours-evens.module';
 import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     RecentCoursComponent,
     FooterComponent,
     DemandeFComponent,
+   
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { EventComponent } from 'src/app//pages/event/event.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoursEvensModule } from '../cours-evens/cours-evens.module';
 import { SpaceAddEventComponent } from 'src/app/pages/space-add-event/space-add-event.component';
+import { SpaceInscritEventComponent } from 'src/app/space-inscrit-event/space-inscrit-event.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { SpaceAddEventComponent } from 'src/app/pages/space-add-event/space-add-
     EventsComponent,
     EventComponent,
     SpaceAddEventComponent,
+    SpaceInscritEventComponent,
   ],
   imports: [
     CommonModule,
