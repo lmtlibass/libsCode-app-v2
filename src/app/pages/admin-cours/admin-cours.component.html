@@ -1,0 +1,25 @@
+<body>
+    <app-sidebar></app-sidebar>
+ 
+     <!-- content -->
+     <div class="content">
+         <nav class="bg-sky-50 w-full">
+             <app-space-nav></app-space-nav>
+         </nav>
+        <div class="container">
+            <div class="row card-cours-recents flex flex-row flex-wrap justify-around">
+                <div class="card carde-cours-re m-5 p-3" *ngFor="let c of cours"  (click)="showCours(this.c.id)">  
+                    <div class="image" *ngFor="let m of module" >
+                        <img  *ngIf="c.module_id == m.id"  src="./../../assets/img/{{m.name}}.png" alt="image Not found">
+                    </div>
+                    <div class="h6 mt-3 card-titre">
+                        {{ c.titre}}
+                    </div>
+                    <div class="desc mt-3">
+                        {{ c.description | slice:0:70}}
+                    </div>
+                </div>
+            </div>   
+        </div>
+     </div>
+ </body>

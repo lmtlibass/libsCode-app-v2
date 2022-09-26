@@ -15,6 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpacesHomeComponent } from 'src/app/pages/spaces-home/spaces-home.component';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminHomeComponent } from 'src/app/pages/admin-home/admin-home.component';
+import { AdminCoursComponent } from 'src/app/pages/admin-cours/admin-cours.component';
+import { AdminCoudetailComponent } from 'src/app/pages/admin-coudetail/admin-coudetail.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     SpaceNavComponent,
     SpaceEvenementsComponent,
     SpacesHomeComponent,
+    AdminHomeComponent,
+    AdminCoursComponent,
+    AdminCoudetailComponent
   ],
   imports: [
     CommonModule,
@@ -35,6 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
+    
   ],
   exports: [
     AllCoursComponent,

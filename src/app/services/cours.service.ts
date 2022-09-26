@@ -35,6 +35,10 @@ export class CoursService {
     showCours(id : number){
       return this.http.get(environment.api_url + 'cour/' + id)
     }
+    //recuperer les details d'un cours pas encors validé
+    showCoursNonvalide(id : number){
+      return this.http.get(environment.api_url + 'courAdmin/' + id)
+    }
     //Enregistrer un cours 
     addCours(cours :any){
       return this.http.post(environment.api_url + 'cours', cours);
@@ -45,5 +49,15 @@ export class CoursService {
       return this.http.get(environment.api_url + 'courUser/' + id);
     }
 
+    //récuperer les cours pas encore validés
+    getCoursNonValid(){
+      return this.http.get(environment.api_url + 'coursAdmin')
+    }
+
+    //changer statut Cours
+    changeStatus(id: number, cours: any){
+      return this.http.put(environment.api_url + 'cours/' + id, cours)
+    }
+   
 
 }
