@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-sidebar',
@@ -8,7 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class AdminSidebarComponent implements OnInit {
   dropdown: string = 'hide-link';
   _dropdown: string = '_hide-link';
-  constructor() { }
+  constructor(
+    private toastr: ToastrService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -24,4 +29,12 @@ export class AdminSidebarComponent implements OnInit {
     this._dropdown = '_hide-link'
   }
 
+   //logout
+   logout(){
+    localStorage.removeItem('user_id');
+    localStorage.removeItem('role');
+    localStorage.removeItem('name');
+    this.toastr.show('Deconnexion réussie');
+    this.router.navigateByUrl('/');
+  }
 }

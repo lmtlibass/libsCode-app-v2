@@ -20,6 +20,7 @@ export class AuthService {
   login(data: any){
     return this.http.post(environment.api_url + 'login', data);
   }
+  
 
   //changer role de l'utilisateur
   changeRoleUser(user_id: any){

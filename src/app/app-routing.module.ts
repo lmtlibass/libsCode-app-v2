@@ -10,6 +10,7 @@ import { CguComponent } from './pages/cgu/cgu.component';
 import { CoursComponent } from './pages/cours/cours.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AdminEvenementComponent } from './pages/admin-evenement/admin-evenement.component';
+import { AdminGuard } from './guards/admin.guard';
 
 
 const routes: Routes = [
@@ -37,19 +38,20 @@ const routes: Routes = [
   {
     path: 'lc-admin',
     loadChildren: ()=>import('./modules/admin/admin-routing.module')
-    .then(m => m.AdminRoutingModule)
+    .then(m => m.AdminRoutingModule),
+    canActivate: [AdminGuard],
   },
   {
-    path: 'lc-admin-cours', component: AdminCoursComponent
+    path: 'lc-admin-cours', component: AdminCoursComponent, canActivate: [AdminGuard]
   },
   {
-    path: 'lc-admin-cour', component: AdminCoudetailComponent
+    path: 'lc-admin-cour', component: AdminCoudetailComponent, canActivate: [AdminGuard]
   },
   {
-    path: 'lc-admin-demande', component: AdminDemandeComponent
+    path: 'lc-admin-demande', component: AdminDemandeComponent, canActivate: [AdminGuard]
   },
   {
-    path: 'lc-admin-events', component: AdminEvenementComponent,
+    path: 'lc-admin-events', component: AdminEvenementComponent, canActivate: [AdminGuard]
   }
 
  

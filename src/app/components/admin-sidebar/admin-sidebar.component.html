@@ -2,27 +2,27 @@
     <div class="sidebar">
         <a href="/"><img src="../../../assets/img/logo1.png" alt="" class="logo"></a>
         <button class="dropdown-btn" (click)="toggle()">
-            Dropdown<img src="../../../assets/img/dropdwon.png" class="imgdd">
+            Module Cours<img src="../../../assets/img/dropdwon.png" class="imgdd">
         </button>
         <div class="mt-5 row" [ngClass]="dropdown">
             <ul style="margin-top: 27%;">
                 <li routerLink="/space-cours">
                     <img src="../../../assets/img/i-liste.png" alt="" >
-                    <a class="ml-2" href="/space-cours">
-                        Cours
-                    </a>
+                    <p class="ml-2" >
+                        Gestion cours
+                    </p>
                 </li>
                 <li>
                     <img src="../../../assets/img/i-add.png" alt="">
-                    <a  class="ml-2" href="/space-cours-add">
-                        Ajouter cour
-                    </a>
+                    <p  class="ml-2" >
+                        Historique
+                    </p>
                 </li>
                 <li>
                     <img src="../../../assets/img/i-stat.png" alt="">
-                    <a  class="ml-2" href="">
+                    <p  class="ml-2" >
                         Stats
-                    </a>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -30,27 +30,27 @@
 
         </div>
         <button class="dropdown-btn mt-5"  (click)="_toggle()">
-            Dropdown<img src="../../../assets/img/dropdwon.png" class="imgdd">
+            Module Evenement<img src="../../../assets/img/dropdwon.png" class="imgdd">
         </button>
         <div class="row mt-5" [ngClass]="_dropdown" >
             <ul style="margin-top: 50%;">
                 <li class="mt-5">
                     <img src="../../../assets/img/i-liste.png" alt="" >
-                    <a class="ml-2" href="/space-event">
-                        Evenements
-                    </a>
+                    <p class="ml-2" >
+                        gestion evenement
+                    </p>
                 </li>
                 <li>
                     <img src="../../../assets/img/i-add.png" alt="">
-                    <a class="ml-2" href="/space-event">
-                        Ajouter evnmnt
-                    </a>
+                    <p class="ml-2" >
+                        Historique
+                    </p>
                 </li>
                 <li>
                     <img src="../../../assets/img/i-inscrit.png" alt="">
-                    <a  class="ml-2" href="/space-liste-inscrit">
+                    <p  class="ml-2" >
                         Inscrits
-                    </a>
+                    </p>
                 </li>
             </ul>
         </div>     
@@ -59,7 +59,7 @@
                 <img src="../../../assets/img/logout.png" alt="" style="width: 20px;">
             </div>
             <div class="flex-1">
-                <p class="flex-1 h6">
+                <p (click)="logout()" class="flex-1 h6" style="color: #fff">
                     deconnexion
                 </p>
             </div>
