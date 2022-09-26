@@ -30,7 +30,10 @@ import { FormsModule } from '@angular/forms';
     RecentEventsComponent,
     RecentCoursComponent,
     FooterComponent,
-    DemandeFComponent, 
+    DemandeFComponent,
+   
+    
+    
   ],
   imports: [
     BrowserModule,

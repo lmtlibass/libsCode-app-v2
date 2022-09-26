@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CoursService } from 'src/app/services/cours.service';
 
@@ -13,7 +14,8 @@ export class AdminCoudetailComponent implements OnInit {
 
   constructor(
     private coursService: CoursService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -41,9 +43,23 @@ export class AdminCoudetailComponent implements OnInit {
             (res)=>{
               console.log(res);
             });
-            this.toastr.success('Valisation réussi!', 'Valider Cours')
+            this.toastr.info ('Validation réussi!', 'Valider Cours')
+            this.router.navigateByUrl('lc-admin')
           console.log(this.cour);
         });
     }
+
+    //supprimer ou désaprouvé un cour
+     //supprimer un cour
+  deleteCours(id: any){
+    return this.coursService.deleteCours(id).subscribe(
+      (res)=>{
+        console.log(res);
+        this.toastr.info('Ce cours à été invalidé !')
+        this.router.navigateByUrl('lc-admin-cours')
+      }
+      ) 
+  }
+
 
 }

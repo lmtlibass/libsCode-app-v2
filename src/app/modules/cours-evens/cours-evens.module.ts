@@ -18,6 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminHomeComponent } from 'src/app/pages/admin-home/admin-home.component';
 import { AdminCoursComponent } from 'src/app/pages/admin-cours/admin-cours.component';
 import { AdminCoudetailComponent } from 'src/app/pages/admin-coudetail/admin-coudetail.component';
+import { AdminDemandeComponent } from 'src/app/pages/admin-demande/admin-demande.component';
+import { AdminSidebarComponent } from 'src/app/components/admin-sidebar/admin-sidebar.component';
+import { AdminEvenementComponent } from 'src/app/pages/admin-evenement/admin-evenement.component';
+import { AdminNavComponent } from 'src/app/components/admin-nav/admin-nav.component';
 
 
 @NgModule({
@@ -33,7 +37,11 @@ import { AdminCoudetailComponent } from 'src/app/pages/admin-coudetail/admin-cou
     SpacesHomeComponent,
     AdminHomeComponent,
     AdminCoursComponent,
-    AdminCoudetailComponent
+    AdminCoudetailComponent,
+    AdminDemandeComponent,
+    AdminSidebarComponent,
+    AdminEvenementComponent,
+    AdminNavComponent,
   ],
   imports: [
     CommonModule,

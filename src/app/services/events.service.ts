@@ -12,14 +12,19 @@ export class EventsService {
     private http: HttpClient
   ) { }
 
-    //recuperer les évenements réscents
+    //recuperer les évenements réscents validés
   eventsRecent(){
     return this.http.get(environment.api_url + 'evenementRe')
   }
 
-  //recuperer tous les évènements
+  //recuperer tous les évènements qui ont été validés par l'admine
   getEvents(){
     return this.http.get(environment.api_url + 'evenements')
+  }
+
+  //récupérer les événements pas encore validé
+  getEventsAdmin(){
+    return this.http.get(environment.api_url + 'evenementAdmin');
   }
 
   //recuperer un evenement
@@ -35,6 +40,12 @@ export class EventsService {
   saveEvents(data: any){
     return this.http.post(environment.api_url + 'evenements', data);
   }
+  //mise à jour evenement
+  updateEvenement( id: number, data: any){
+    return this.http.put(environment.api_url + 'evenement/' + id, data);
+  }
+
+    
 
   //enregistrer liste inscrit Event
   savelInscritEvent(listeInscritEvent: ListeInscritEvent){
@@ -45,6 +56,8 @@ export class EventsService {
   getInscrits(event_id: number){
     return this.http.get(environment.api_url + 'liste/' + event_id);
   }
+
+
 
   
   

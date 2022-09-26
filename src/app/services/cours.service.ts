@@ -58,6 +58,11 @@ export class CoursService {
     changeStatus(id: number, cours: any){
       return this.http.put(environment.api_url + 'cours/' + id, cours)
     }
+
+    //désaprouvé ou supprimé un cours
+    deleteCours(id: number){
+      return this.http.delete(environment.api_url + 'cours/'+ id);
+    }
    
 
 }

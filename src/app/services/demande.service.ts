@@ -15,4 +15,9 @@ export class DemandeService {
   demande(demande : any){
     return this.http.post(environment.api_url + 'addemandes', demande);
   }
+
+  //recevoir les demandes 
+  getDemande(){
+    return this.http.get(environment.api_url + 'demandes');
+  }
 }

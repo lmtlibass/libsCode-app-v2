@@ -21,6 +21,11 @@ export class AuthService {
     return this.http.post(environment.api_url + 'login', data);
   }
 
+  //changer role de l'utilisateur
+  changeRoleUser(user_id: any){
+    return this.http.get(environment.api_url + 'roleUser/' + user_id)
+  }
+
   
 
 }
